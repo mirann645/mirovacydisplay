@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Display - Download</title>
+    <style>
+        /* Sayfa genel ayarları */
+        body {
+            background-color: #000000; /* Arka plan siyah */
+            color: #ffffff; /* Yazılar beyaz */
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Başlık stili */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Alt başlık (LIZARD) stili */
+        .credits {
+            font-size: 1.1rem;
+            color: #888888; /* Gri tonlarında yan yazı */
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        /* Download butonu stili */
+        .download-btn {
+            background-color: #ffffff; /* Beyaz buton */
+            color: #000000; /* Siyah yazı */
+            padding: 18px 50px;
+            text-decoration: none;
+            border-radius: 50px; /* Yuvarlak köşeler */
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Butonun üzerine gelince olacaklar */
+        .download-btn:hover {
+            background-color: #cccccc;
+            transform: translateY(-3px); /* Hafif yukarı kalkma efekti */
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Tıklama efekti */
+        .download-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Privacy Display</h1>
+    <div class="credits">created by LIZARD</div>
+
+    <a href="privacydisplay.apk" class="download-btn" download>Download</a>
+
+</body>
+</html>
