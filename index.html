@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Display - Download</title>
+    <title>Lizard Software - Download Manager</title>
     <style>
         /* Sayfa genel ayarları */
         body {
@@ -14,60 +14,108 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             text-align: center;
         }
 
-        /* Başlık stili */
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0;
-            letter-spacing: 2px;
+        /* Üst Başlık */
+        .manager-title {
+            font-size: 1rem;
+            color: #555555;
             text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
         }
 
-        /* Alt başlık (LIZARD) stili */
+        /* Ana Başlık */
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
         .credits {
-            font-size: 1.1rem;
-            color: #888888; /* Gri tonlarında yan yazı */
-            margin-top: 10px;
-            margin-bottom: 40px;
+            font-size: 1rem;
+            color: #888888;
+            margin-bottom: 50px;
             font-style: italic;
         }
 
-        /* Download butonu stili */
+        /* Buton Konteyner */
+        .download-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 300px;
+        }
+
+        /* Genel Buton Stili */
         .download-btn {
-            background-color: #ffffff; /* Beyaz buton */
-            color: #000000; /* Siyah yazı */
-            padding: 18px 50px;
+            padding: 18px 30px;
             text-decoration: none;
-            border-radius: 50px; /* Yuvarlak köşeler */
+            border-radius: 12px; /* Daha modern karemsi yuvarlak */
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+            display: block;
         }
 
-        /* Butonun üzerine gelince olacaklar */
+        /* Privacy Display Butonu (Beyaz) */
+        .pd-btn {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Lizard Optimizer Butonu (Yeşil) */
+        .lo-btn {
+            background-color: #00E676;
+            color: #000000;
+            box-shadow: 0 4px 15px rgba(0, 230, 118, 0.2);
+        }
+
+        /* Hover Efektleri */
         .download-btn:hover {
-            background-color: #cccccc;
-            transform: translateY(-3px); /* Hafif yukarı kalkma efekti */
-            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+            transform: translateY(-5px);
+            filter: brightness(0.9);
         }
 
-        /* Tıklama efekti */
-        .download-btn:active {
-            transform: translateY(0);
+        .pd-btn:hover { box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3); }
+        .lo-btn:hover { box-shadow: 0 8px 25px rgba(0, 230, 118, 0.4); }
+
+        .download-btn:active { transform: translateY(0); }
+
+        /* Küçük Etiketler */
+        .btn-label {
+            display: block;
+            font-size: 0.7rem;
+            margin-bottom: 5px;
+            color: #666666;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <h1>Privacy Display</h1>
-    <div class="credits">created by LIZARD</div>
+    <div class="manager-title">Lizard Software Download Manager</div>
+    <h1>Lizard Suite</h1>
+    <div class="credits">developed by LIZARD</div>
 
-    <a href="privacydisplay.apk" class="download-btn" download>Download</a>
+    <div class="download-container">
+        
+        <div>
+            <span class="btn-label">Ekran Gizlilik Aracı</span>
+            <a href="privacydisplay.apk" class="download-btn pd-btn" download>Privacy Display İndir</a>
+        </div>
+
+        <div>
+            <span class="btn-label">Sistem Optimizasyon Aracı</span>
+            <a href="lizardoptimizer.apk" class="download-btn lo-btn" download>Lizard Optimizer İndir</a>
+        </div>
+
+    </div>
 
 </body>
 </html>
